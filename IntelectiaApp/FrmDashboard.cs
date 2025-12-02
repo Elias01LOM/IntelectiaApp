@@ -12,17 +12,13 @@ namespace IntelectiaApp
 {
     public partial class FrmDashboard : Form
     {
-        public FrmDashboard()
+        // Constructor del formulario
+        public FrmDashboard(string nombreUsuario)
         {
             InitializeComponent();
-        }
-        // Modificamos el constructor para pedir el nombre
-    public FrmDashboard(string nombreUsuario)
-        {
-            InitializeComponent();
-            lblSaludo.Text = $"Hola, {nombreUsuario}";
-        }
+            lblSaludo.Text = "Hola, " + nombreUsuario;    // Asignamos el nombre del usuario al label de saludo
 
+        }
         private void lblCerrar_Click(object sender, EventArgs e)
         {
             this.Close(); // Esto disparará el evento que cierra toda la app correctamente
