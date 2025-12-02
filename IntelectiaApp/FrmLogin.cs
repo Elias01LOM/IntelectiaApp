@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace IntelectiaApp
 {
-    public partial class FmrLogin : Form
+    public partial class FrmLogin : Form
     {
-        public FmrLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }

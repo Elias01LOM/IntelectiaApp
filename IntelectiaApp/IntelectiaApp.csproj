@@ -99,11 +99,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CConexion.cs" />
-    <Compile Include="FmrLogin.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FmrLogin.Designer.cs">
-      <DependentUpon>FmrLogin.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBiblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBiblioteca.Designer.cs">
+      <DependentUpon>FrmBiblioteca.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
@@ -113,8 +119,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FmrLogin.resx">
-      <DependentUpon>FmrLogin.cs</DependentUpon>
+    <Compile Include="UCLibro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLibro.Designer.cs">
+      <DependentUpon>UCLibro.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmBiblioteca.resx">
+      <DependentUpon>FrmBiblioteca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
@@ -128,6 +143,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCLibro.resx">
+      <DependentUpon>UCLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

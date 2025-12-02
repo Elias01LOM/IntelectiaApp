@@ -11,17 +11,12 @@ namespace IntelectiaApp
     {
         // La cadena de conexión a la base de datos es privada (encapsulamiento)
         private string cadenaConexion = "Server=localhost; Database=DB_Intelectia; Uid=root; Pwd=Ochoa#2006Elias;";
-
         private MySqlConnection conexion;
-
-        // Inicializa la conexión (cosntructor)
-        public CConexion()
+        public CConexion()    // Inicializa la conexión (constructor)
         {
             conexion = new MySqlConnection(cadenaConexion);
         }
-
-        // Método que abre la conexión
-        public MySqlConnection EstablecerConexion()
+        public MySqlConnection EstablecerConexion()    // Método que abre la conexión
         {
             try
             {
@@ -37,9 +32,7 @@ namespace IntelectiaApp
             }
             return conexion;
         }
-
-        // Método que cierra la conexión
-        public void CerrarConexion()
+        public void CerrarConexion()    // Método que cierra la conexión
         {
             if (conexion.State == ConnectionState.Open)
             {
