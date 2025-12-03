@@ -146,11 +146,9 @@ namespace IntelectiaApp
 
         private void label4_Click(object sender, EventArgs e)
         {
-            // Aquí abriremos el formulario de registro (cuando lo creemos)
-            // FrmRegistro registro = new FrmRegistro();
-            // registro.Show();
-            // this.Hide();
-            MessageBox.Show("Módulo de Registro en construcción.", "Intelectia");
+            FrmRegistro registro = new FrmRegistro();
+            registro.ShowDialog();
+            this.Show();
         }
     }
 }
