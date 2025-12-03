@@ -34,24 +34,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lnkLogin = new System.Windows.Forms.Label();
-            this.lblCerrar = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblTituloCodigo = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.lnkLogin = new System.Windows.Forms.Label();
+            this.lblCerrar = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAccion = new BotonRedondo();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,6 +127,97 @@
             this.panel2.Size = new System.Drawing.Size(535, 560);
             this.panel2.TabIndex = 11;
             // 
+            // lblTituloCodigo
+            // 
+            this.lblTituloCodigo.AutoSize = true;
+            this.lblTituloCodigo.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblTituloCodigo.ForeColor = System.Drawing.Color.Black;
+            this.lblTituloCodigo.Location = new System.Drawing.Point(104, 261);
+            this.lblTituloCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTituloCodigo.Name = "lblTituloCodigo";
+            this.lblTituloCodigo.Size = new System.Drawing.Size(160, 20);
+            this.lblTituloCodigo.TabIndex = 29;
+            this.lblTituloCodigo.Text = "Código de Verificación";
+            this.lblTituloCodigo.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Location = new System.Drawing.Point(108, 324);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(338, 1);
+            this.panel5.TabIndex = 28;
+            this.panel5.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.txtCodigo);
+            this.panel6.Location = new System.Drawing.Point(108, 284);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(338, 41);
+            this.panel6.TabIndex = 27;
+            this.panel6.Visible = false;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigo.BackColor = System.Drawing.Color.White;
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCodigo.Location = new System.Drawing.Point(20, 10);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(300, 22);
+            this.txtCodigo.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(104, 183);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 20);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Correo Electrónico";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Location = new System.Drawing.Point(108, 246);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(338, 1);
+            this.panel4.TabIndex = 25;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtCorreo);
+            this.panel3.Location = new System.Drawing.Point(108, 206);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(338, 41);
+            this.panel3.TabIndex = 24;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCorreo.BackColor = System.Drawing.Color.White;
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCorreo.Location = new System.Drawing.Point(20, 10);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(300, 22);
+            this.txtCorreo.TabIndex = 3;
+            // 
             // lnkLogin
             // 
             this.lnkLogin.AutoSize = true;
@@ -182,97 +273,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Recuperar Contraseña";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(104, 183);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Correo Electrónico";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gray;
-            this.panel4.Location = new System.Drawing.Point(108, 246);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(338, 1);
-            this.panel4.TabIndex = 25;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtCorreo);
-            this.panel3.Location = new System.Drawing.Point(108, 206);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(338, 41);
-            this.panel3.TabIndex = 24;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCorreo.BackColor = System.Drawing.Color.White;
-            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCorreo.Location = new System.Drawing.Point(20, 10);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(300, 22);
-            this.txtCorreo.TabIndex = 3;
-            // 
-            // lblTituloCodigo
-            // 
-            this.lblTituloCodigo.AutoSize = true;
-            this.lblTituloCodigo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblTituloCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblTituloCodigo.Location = new System.Drawing.Point(104, 261);
-            this.lblTituloCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTituloCodigo.Name = "lblTituloCodigo";
-            this.lblTituloCodigo.Size = new System.Drawing.Size(160, 20);
-            this.lblTituloCodigo.TabIndex = 29;
-            this.lblTituloCodigo.Text = "Código de Verificación";
-            this.lblTituloCodigo.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Location = new System.Drawing.Point(108, 324);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(338, 1);
-            this.panel5.TabIndex = 28;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.txtCodigo);
-            this.panel6.Location = new System.Drawing.Point(108, 284);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(338, 41);
-            this.panel6.TabIndex = 27;
-            this.panel6.Visible = false;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigo.BackColor = System.Drawing.Color.White;
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCodigo.Location = new System.Drawing.Point(20, 10);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(300, 22);
-            this.txtCodigo.TabIndex = 3;
-            this.txtCodigo.Visible = false;
-            // 
             // btnAccion
             // 
             this.btnAccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
@@ -305,10 +305,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -10,7 +10,7 @@ namespace IntelectiaApp
     public class CConexion
     {
         // La cadena de conexión a la base de datos es privada (encapsulamiento)
-        private string cadenaConexion = "Server=localhost; Database=DB_Intelectia; Uid=root; Pwd=Ochoa#2006Elias;";
+        private string cadenaConexion = "Server=localhost; Database=DB_Intelectia; Uid=root; Pwd=dDmf27r4ib saz;";
         private MySqlConnection conexion;
         public CConexion()    // Inicializa la conexión (constructor)
         {
