@@ -12,17 +12,13 @@ namespace IntelectiaApp
 {
     public partial class FrmDashboard : Form
     {
-        public FrmDashboard()
+        private Form formularioActivo = null;    // Variable para rastrear el formulario activo dentro del panel
+        public FrmDashboard(string nombreUsuario)    // Constructor del formulario
         {
             InitializeComponent();
-        }
-        // Modificamos el constructor para pedir el nombre
-    public FrmDashboard(string nombreUsuario)
-        {
-            InitializeComponent();
-            lblSaludo.Text = $"Hola, {nombreUsuario}";
-        }
+            lblSaludo.Text = "Hola, " + nombreUsuario;    // Asignamos el nombre del usuario al label de saludo
 
+        }
         private void lblCerrar_Click(object sender, EventArgs e)
         {
             this.Close(); // Esto disparará el evento que cierra toda la app correctamente
@@ -31,6 +27,26 @@ namespace IntelectiaApp
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void AbrirFormularioHijo(Form formularioHijo)
+        {
+            // Si ya hay un formulario abierto, lo cerramos para liberar memoria
+            if (formularioActivo != null)
+                formularioActivo.Close();
+            formularioActivo = formularioHijo;
+            // Configuramos el formulario hijo para que se comporte como un control
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panel3.Controls.Add(formularioHijo); // Agregamos el formulario al Panel Central
+            panel3.Tag = formularioHijo;
+            formularioHijo.BringToFront();    // Mostramos dicho formulario
+            formularioHijo.Show();
+        }
+
+        private void btnBiblioteca_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmBiblioteca());
         }
     }
 }

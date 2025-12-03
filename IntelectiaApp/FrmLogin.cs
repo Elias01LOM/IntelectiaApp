@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace IntelectiaApp
 {
-    public partial class FmrLogin : Form
+    public partial class FrmLogin : Form
     {
-        public FmrLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -68,14 +68,14 @@ namespace IntelectiaApp
 
         private void botonRedondo2_Click(object sender, EventArgs e)
         {
-            // URL de autenticación de Google (simulación)
+            // URL de autenticación de Google
             string urlGoogle = "https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
             try
             {
                 // Abre el navegador predeterminado del sistema
                 System.Diagnostics.Process.Start(urlGoogle);
-                // Opcional: Mostrar mensaje en la app
+                // Muestra mensaje en la app
                 MessageBox.Show("Se ha abierto el navegador para iniciar sesión con Google.\n\n" +
                                 "Nota: La integración completa de OAuth requiere configuración de API en la nube.",
                                 "Redirección", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -88,14 +88,14 @@ namespace IntelectiaApp
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            // 1. Validación de campos vacíos (Calidad de Software)
+            // Validamos que no hay campos vacíos
             if (string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
                 MessageBox.Show("Por favor, ingrese correo y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Conectar a la Base de Datos
+            // Conectamos a a la Base de Datos
             CConexion objetoConexion = new CConexion();
             MySqlConnection conexion = objetoConexion.EstablecerConexion();
 
@@ -115,18 +115,12 @@ namespace IntelectiaApp
 
                     if (reader.Read()) // Si encontró un usuario
                     {
-                        string rol = reader["tipoUsuario"].ToString();
-                        string nombre = reader["nombre"].ToString();
-                        MessageBox.Show($"¡Bienvenido {nombre}!\nRol: {rol}", "Acceso Concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Ocultamos el Login
-                        this.Hide();
-                        // Instanciamos el Dashboard
-                        FrmDashboard dash = new FrmDashboard();
-                        // Nos suscribimos al evento "Closed" del Dashboard
-                        // Esto sirve para que, cuando se cierra el Dashboard; provoca que se cierre toda la aplicación por completo
-                        dash.FormClosed += (s, args) => this.Close();
-                        // Se mostrará el Dashboard
-                        dash.Show();
+                        string nombreBD = reader["nombre"].ToString();
+                        string rolBD = reader["tipoUsuario"].ToString(); // Opcional, por si se usa luego
+                        FrmDashboard dash = new FrmDashboard(nombreBD);
+                        this.Hide();    // Ocultamos el Login
+                        dash.FormClosed += (s, args) => this.Close();    // Aseguramos cierre total
+                        dash.Show();    // Mostramos el Dashboard
                     }
                     else
                     {
@@ -149,6 +143,16 @@ namespace IntelectiaApp
             FrmRegistro registro = new FrmRegistro();
             registro.ShowDialog();
             this.Show();
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
