@@ -22,7 +22,7 @@ namespace IntelectiaApp
         {
             // Validación de campos (Defensa)
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtCorreo.Text) ||
                 string.IsNullOrWhiteSpace(txtContraseña.Text))
             {
                 MessageBox.Show("Por favor, verifique que todos los campos estén completos.",
@@ -44,7 +44,7 @@ namespace IntelectiaApp
                 // Verificar duplicados
                 string queryCheck = "SELECT count(*) FROM Usuario WHERE email = @emailCheck";
                 MySqlCommand cmdCheck = new MySqlCommand(queryCheck, conn);
-                cmdCheck.Parameters.AddWithValue("@emailCheck", txtEmail.Text.Trim());
+                cmdCheck.Parameters.AddWithValue("@emailCheck", txtCorreo.Text.Trim());
 
                 int existe = Convert.ToInt32(cmdCheck.ExecuteScalar());
 
@@ -63,7 +63,7 @@ namespace IntelectiaApp
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", nuevoId);
                 cmd.Parameters.AddWithValue("@nom", txtNombre.Text.Trim());
-                cmd.Parameters.AddWithValue("@mail", txtEmail.Text.Trim());
+                cmd.Parameters.AddWithValue("@mail", txtCorreo.Text.Trim());
                 cmd.Parameters.AddWithValue("@pass", txtContraseña.Text.Trim());
 
                 cmd.ExecuteNonQuery();
@@ -83,7 +83,7 @@ namespace IntelectiaApp
         private void LimpiarCampos()
         {
             txtNombre.Clear();
-            txtEmail.Clear();
+            txtCorreo.Clear();
             txtContraseña.Clear();
             txtConfirmar.Clear();
         }

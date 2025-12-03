@@ -111,6 +111,12 @@
     <Compile Include="FrmBiblioteca.Designer.cs">
       <DependentUpon>FrmBiblioteca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRecuperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecuperar.Designer.cs">
+      <DependentUpon>FrmRecuperar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecuperar.resx">
+      <DependentUpon>FrmRecuperar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
