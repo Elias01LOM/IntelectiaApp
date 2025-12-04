@@ -34,7 +34,7 @@ namespace IntelectiaApp
                 {
                     try
                     {
-                        string query = "SELECT titulo, autor, precio, urlImagen FROM Libro";    // Se hace la consulta SQL
+                        string query = "SELECT titulo, autor, precio, urlImagen, formato FROM Libro WHERE formato IN ('PDF', 'EPUB', 'Audio')";    // Se hace la consulta SQL
                         MySqlCommand cmd = new MySqlCommand(query, conexion);
                         MySqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())    // Se recorren los resultados

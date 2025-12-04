@@ -99,6 +99,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CConexion.cs" />
+    <Compile Include="FrmDetalleLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalleLibro.Designer.cs">
+      <DependentUpon>FrmDetalleLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="FrmBiblioteca.resx">
       <DependentUpon>FrmBiblioteca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalleLibro.resx">
+      <DependentUpon>FrmDetalleLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

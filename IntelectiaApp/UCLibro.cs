@@ -12,38 +12,33 @@ namespace IntelectiaApp
 {
     public partial class UCLibro : UserControl
     {
+        // Se declaran las variables para guardar los datos del libro
+        private string tituloGuardado;
+        private string autorGuardado;
+        private string precioGuardado;
+        private string urlGuardada;
         public UCLibro()
         {
             InitializeComponent();
         }
         public void ConfigurarDatos(string titulo, string autor, string precio, string urlImagen)
         {
-            lblTitulo.Text = titulo;
+            tituloGuardado = titulo;    // Guardamos los datos en memoria
+            autorGuardado = autor;
+            precioGuardado = precio;
+            urlGuardada = urlImagen;
+            lblTitulo.Text = titulo;    // Asignamos los datos a la tarjeta
             lblAutor.Text = autor;
-            // lblPrecio.Text = "$" + precio; // Descomentar cuando se tenga label de precio
-            if (titulo.Length > 20) lblTitulo.Text = titulo.Substring(0, 18) + "...";    // Si el título es muy largo, se acorta
-            // Lógica para cargar la imagen desde la URL
+            // Implementamos la lógica visual de imagen
             try
             {
-                // Válida que el link no sea basura
                 if (!string.IsNullOrEmpty(urlImagen) && urlImagen.StartsWith("http"))
-                {
                     picPortada.LoadAsync(urlImagen);
-                }
                 else
-                {
-                    picPortada.Image = null;    //  Si no hay link válido, cargamos una imagen por defecto local o nada
-                    picPortada.BackColor = Color.LightGray; // Un fondo gris
-                }
+                    picPortada.BackColor = Color.LightGray;
             }
-            catch
-            {
-                // Si falla la descarga, mostramos un color sólido
-                picPortada.Image = null;
-                picPortada.BackColor = Color.Gray;
-            }
+            catch { picPortada.BackColor = Color.LightGray; }
         }
-
         private void UCLibro_Load(object sender, EventArgs e)
         {
 
@@ -52,6 +47,19 @@ namespace IntelectiaApp
         private void picPortada_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Creamos la ventana de detalle y se le 'vomitan' los datos guardados
+            FrmDetalleLibro detalle = new FrmDetalleLibro(
+                tituloGuardado,
+                autorGuardado,
+                precioGuardado,
+                urlGuardada
+            );
+            // ShowDialog() es clave; ya que abre la ventana y bloquea la de atrás hasta cerrar
+            detalle.ShowDialog();
         }
     }
 }
