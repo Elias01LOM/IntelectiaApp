@@ -89,8 +89,7 @@ namespace IntelectiaApp
                 try
                 {
                     // Consulta SQL
-                    string query = "SELECT tipoUsuario, nombre FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = TRUE";
-
+                    string query = "SELECT idUsuario, email, nombre, tipoUsuario FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = 1";
                     MySqlCommand cmd = new MySqlCommand(query, conexion);
                     cmd.Parameters.AddWithValue("@email", txtCorreo.Text);
                     cmd.Parameters.AddWithValue("@pass", txtContraseña.Text);
