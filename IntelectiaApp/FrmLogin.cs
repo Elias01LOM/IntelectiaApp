@@ -104,8 +104,7 @@ namespace IntelectiaApp
                 try
                 {
                     // 3. Consulta SQL Segura (Evita Inyección SQL usando parámetros)
-                    string query = "SELECT tipoUsuario, nombre FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = TRUE";
-
+                    string query = "SELECT idUsuario, email, nombre, tipoUsuario FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = 1";
                     MySqlCommand cmd = new MySqlCommand(query, conexion);
                     cmd.Parameters.AddWithValue("@email", txtCorreo.Text);
                     cmd.Parameters.AddWithValue("@pass", txtContraseña.Text);
@@ -115,6 +114,11 @@ namespace IntelectiaApp
 
                     if (reader.Read()) // Si encontró un usuario
                     {
+                        // Para que se guarden los datos del usuario para proximas modificaciones o para mostrar
+                        Sesion.IdUsuario = reader["idUsuario"].ToString(); 
+                        Sesion.Nombre = reader["nombre"].ToString();
+                        Sesion.Email = reader["email"].ToString();
+                        Sesion.TipoUsuario = reader["tipoUsuario"].ToString();
                         string nombreBD = reader["nombre"].ToString();
                         string rolBD = reader["tipoUsuario"].ToString(); // Opcional, por si se usa luego
                         FrmDashboard dash = new FrmDashboard(nombreBD);

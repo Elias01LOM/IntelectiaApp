@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 1024);
+            this.panel1.Size = new System.Drawing.Size(225, 748);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -67,8 +68,9 @@
             this.panel4.Controls.Add(this.btnBiblioteca);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 1024);
+            this.panel4.Size = new System.Drawing.Size(225, 748);
             this.panel4.TabIndex = 0;
             // 
             // btnPerfil
@@ -79,12 +81,14 @@
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfil.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.Location = new System.Drawing.Point(0, 767);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 623);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(300, 65);
+            this.btnPerfil.Size = new System.Drawing.Size(225, 53);
             this.btnPerfil.TabIndex = 6;
             this.btnPerfil.Text = "Perfil y Ajustes";
             this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnVendedores
             // 
@@ -94,9 +98,10 @@
             this.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVendedores.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnVendedores.ForeColor = System.Drawing.Color.White;
-            this.btnVendedores.Location = new System.Drawing.Point(0, 696);
+            this.btnVendedores.Location = new System.Drawing.Point(0, 566);
+            this.btnVendedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVendedores.Name = "btnVendedores";
-            this.btnVendedores.Size = new System.Drawing.Size(300, 65);
+            this.btnVendedores.Size = new System.Drawing.Size(225, 53);
             this.btnVendedores.TabIndex = 5;
             this.btnVendedores.Text = "Para Vendedores";
             this.btnVendedores.UseVisualStyleBackColor = false;
@@ -109,9 +114,10 @@
             this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrupos.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnGrupos.ForeColor = System.Drawing.Color.White;
-            this.btnGrupos.Location = new System.Drawing.Point(0, 625);
+            this.btnGrupos.Location = new System.Drawing.Point(0, 508);
+            this.btnGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGrupos.Name = "btnGrupos";
-            this.btnGrupos.Size = new System.Drawing.Size(300, 65);
+            this.btnGrupos.Size = new System.Drawing.Size(225, 53);
             this.btnGrupos.TabIndex = 4;
             this.btnGrupos.Text = "Grupos de Estudio";
             this.btnGrupos.UseVisualStyleBackColor = false;
@@ -124,9 +130,10 @@
             this.btnMarketplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarketplace.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnMarketplace.ForeColor = System.Drawing.Color.White;
-            this.btnMarketplace.Location = new System.Drawing.Point(0, 554);
+            this.btnMarketplace.Location = new System.Drawing.Point(0, 450);
+            this.btnMarketplace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMarketplace.Name = "btnMarketplace";
-            this.btnMarketplace.Size = new System.Drawing.Size(300, 65);
+            this.btnMarketplace.Size = new System.Drawing.Size(225, 53);
             this.btnMarketplace.TabIndex = 3;
             this.btnMarketplace.Text = "Marketplace";
             this.btnMarketplace.UseVisualStyleBackColor = false;
@@ -135,9 +142,10 @@
             // 
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(0, 80);
+            this.panel5.Location = new System.Drawing.Point(0, 65);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 250);
+            this.panel5.Size = new System.Drawing.Size(225, 203);
             this.panel5.TabIndex = 2;
             // 
             // btnBiblioteca
@@ -148,9 +156,10 @@
             this.btnBiblioteca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBiblioteca.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnBiblioteca.ForeColor = System.Drawing.Color.White;
-            this.btnBiblioteca.Location = new System.Drawing.Point(0, 483);
+            this.btnBiblioteca.Location = new System.Drawing.Point(0, 392);
+            this.btnBiblioteca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBiblioteca.Name = "btnBiblioteca";
-            this.btnBiblioteca.Size = new System.Drawing.Size(300, 65);
+            this.btnBiblioteca.Size = new System.Drawing.Size(225, 53);
             this.btnBiblioteca.TabIndex = 1;
             this.btnBiblioteca.Text = "Mi Biblioteca";
             this.btnBiblioteca.UseVisualStyleBackColor = false;
@@ -161,9 +170,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lblCerrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(300, 0);
+            this.panel2.Location = new System.Drawing.Point(225, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1140, 80);
+            this.panel2.Size = new System.Drawing.Size(855, 65);
             this.panel2.TabIndex = 1;
             // 
             // lblCerrar
@@ -171,9 +181,10 @@
             this.lblCerrar.AutoSize = true;
             this.lblCerrar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblCerrar.ForeColor = System.Drawing.Color.Gray;
-            this.lblCerrar.Location = new System.Drawing.Point(1116, 0);
+            this.lblCerrar.Location = new System.Drawing.Point(837, 0);
+            this.lblCerrar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerrar.Name = "lblCerrar";
-            this.lblCerrar.Size = new System.Drawing.Size(24, 28);
+            this.lblCerrar.Size = new System.Drawing.Size(19, 21);
             this.lblCerrar.TabIndex = 12;
             this.lblCerrar.Text = "X";
             this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
@@ -183,9 +194,10 @@
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.lblSaludo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(300, 80);
+            this.panel3.Location = new System.Drawing.Point(225, 65);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1140, 944);
+            this.panel3.Size = new System.Drawing.Size(855, 683);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -193,21 +205,23 @@
             // 
             this.lblSaludo.AutoSize = true;
             this.lblSaludo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblSaludo.Location = new System.Drawing.Point(22, 14);
+            this.lblSaludo.Location = new System.Drawing.Point(16, 11);
+            this.lblSaludo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSaludo.Name = "lblSaludo";
-            this.lblSaludo.Size = new System.Drawing.Size(109, 28);
+            this.lblSaludo.Size = new System.Drawing.Size(87, 21);
             this.lblSaludo.TabIndex = 0;
             this.lblSaludo.Text = "Bienvenido";
             // 
             // FrmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
+            this.ClientSize = new System.Drawing.Size(1080, 748);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDashboard";

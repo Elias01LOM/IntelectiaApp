@@ -111,6 +111,12 @@
     <Compile Include="FrmBiblioteca.Designer.cs">
       <DependentUpon>FrmBiblioteca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerfil.Designer.cs">
+      <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRecuperar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,17 +137,45 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sesion.cs" />
+    <Compile Include="UCDirecciones_Datos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDirecciones_Datos.Designer.cs">
+      <DependentUpon>UCDirecciones_Datos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCLibro.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCLibro.Designer.cs">
       <DependentUpon>UCLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCPago_Datos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPago_Datos.Designer.cs">
+      <DependentUpon>UCPago_Datos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPerfil_Datos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPerfil_Datos.Designer.cs">
+      <DependentUpon>UCPerfil_Datos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSeguridad_Datos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSeguridad_Datos.Designer.cs">
+      <DependentUpon>UCSeguridad_Datos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmBiblioteca.resx">
       <DependentUpon>FrmBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerfil.resx">
+      <DependentUpon>FrmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRecuperar.resx">
       <DependentUpon>FrmRecuperar.cs</DependentUpon>
@@ -161,8 +195,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCDirecciones_Datos.resx">
+      <DependentUpon>UCDirecciones_Datos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCLibro.resx">
       <DependentUpon>UCLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPago_Datos.resx">
+      <DependentUpon>UCPago_Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPerfil_Datos.resx">
+      <DependentUpon>UCPerfil_Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSeguridad_Datos.resx">
+      <DependentUpon>UCSeguridad_Datos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
