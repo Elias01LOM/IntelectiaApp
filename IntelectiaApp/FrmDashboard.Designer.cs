@@ -85,6 +85,7 @@
             this.btnPerfil.TabIndex = 6;
             this.btnPerfil.Text = "Perfil y Ajustes";
             this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnVendedores
             // 

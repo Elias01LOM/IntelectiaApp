@@ -48,5 +48,10 @@ namespace IntelectiaApp
         {
 
         }
+
+        private void picPortada_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

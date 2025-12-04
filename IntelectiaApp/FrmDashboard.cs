@@ -48,5 +48,10 @@ namespace IntelectiaApp
         {
             AbrirFormularioHijo(new FrmBiblioteca());
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

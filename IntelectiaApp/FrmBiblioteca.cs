@@ -63,5 +63,10 @@ namespace IntelectiaApp
         {
 
         }
+
+        private void flowPanelLibros_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
