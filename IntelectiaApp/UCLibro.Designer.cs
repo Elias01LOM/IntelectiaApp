@@ -46,6 +46,7 @@
             this.picPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPortada.TabIndex = 1;
             this.picPortada.TabStop = false;
+            this.picPortada.Click += new System.EventHandler(this.picPortada_Click);
             // 
             // lblTitulo
             // 

@@ -52,6 +52,7 @@
             this.flowPanelLibros.Padding = new System.Windows.Forms.Padding(20);
             this.flowPanelLibros.Size = new System.Drawing.Size(1182, 1033);
             this.flowPanelLibros.TabIndex = 1;
+            this.flowPanelLibros.Paint += new System.Windows.Forms.PaintEventHandler(this.flowPanelLibros_Paint);
             // 
             // FrmBiblioteca
             // 

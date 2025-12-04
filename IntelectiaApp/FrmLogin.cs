@@ -17,19 +17,14 @@ namespace IntelectiaApp
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            // Instanciamos nuestra clase de conexión
-            CConexion objetoConexion = new CConexion();
-
-            // Intentamos conectar
-            try
+            CConexion objetoConexion = new CConexion();    // Instanciamos nuestra clase de conexión
+            try    // Intentamos la conexión con la base de datos
             {
                 objetoConexion.EstablecerConexion();
                 MessageBox.Show("¡Conexión a la BD Intelectia establecida correctamente!");
@@ -40,37 +35,30 @@ namespace IntelectiaApp
                 MessageBox.Show("Falló la prueba: " + ex.Message);
             }
         }
-
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void lblCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void lblCerrar_MouseEnter(object sender, EventArgs e)
         {
             lblCerrar.ForeColor = Color.Red;
         }
-
         private void lblCerrar_MouseLeave(object sender, EventArgs e)
         {
             lblCerrar.ForeColor = Color.Gray;
         }
-
         private void botonRedondo2_Click(object sender, EventArgs e)
         {
             // URL de autenticación de Google
             string urlGoogle = "https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin";
-
             try
             {
                 // Abre el navegador predeterminado del sistema
@@ -85,7 +73,6 @@ namespace IntelectiaApp
                 MessageBox.Show("No se pudo abrir el navegador: " + ex.Message);
             }
         }
-
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
             // Validamos que no hay campos vacíos
@@ -94,25 +81,21 @@ namespace IntelectiaApp
                 MessageBox.Show("Por favor, ingrese correo y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // Conectamos a a la Base de Datos
-            CConexion objetoConexion = new CConexion();
+            CConexion objetoConexion = new CConexion();    // Conectamos a la Base de Datos
             MySqlConnection conexion = objetoConexion.EstablecerConexion();
 
             if (conexion != null) // Si la conexión abrió bien
             {
                 try
                 {
-                    // 3. Consulta SQL Segura (Evita Inyección SQL usando parámetros)
-                    string query = "SELECT idUsuario, email, nombre, tipoUsuario FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = 1";
+                    // Consulta SQL
+                    string query = "SELECT tipoUsuario, nombre FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = TRUE";
+
                     MySqlCommand cmd = new MySqlCommand(query, conexion);
                     cmd.Parameters.AddWithValue("@email", txtCorreo.Text);
                     cmd.Parameters.AddWithValue("@pass", txtContraseña.Text);
-
-                    // 4. Ejecutar lectura
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read()) // Si encontró un usuario
+                    MySqlDataReader reader = cmd.ExecuteReader();    // Ejecuta la lectura
+                    if (reader.Read()) // Si encuentra a algún usuario
                     {
                         // Para que se guarden los datos del usuario para proximas modificaciones o para mostrar
                         Sesion.IdUsuario = reader["idUsuario"].ToString(); 
@@ -141,19 +124,16 @@ namespace IntelectiaApp
                 }
             }
         }
-
         private void label4_Click(object sender, EventArgs e)
         {
             FrmRegistro registro = new FrmRegistro();
             registro.ShowDialog();
             this.Show();
         }
-
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
