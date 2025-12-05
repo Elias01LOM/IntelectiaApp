@@ -141,6 +141,12 @@
     <Compile Include="FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVendedores.Designer.cs">
+      <DependentUpon>FrmVendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sesion.cs" />
@@ -174,6 +180,24 @@
     <Compile Include="UCSeguridad_Datos.Designer.cs">
       <DependentUpon>UCSeguridad_Datos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCVendedor_MisLibros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCVendedor_MisLibros.Designer.cs">
+      <DependentUpon>UCVendedor_MisLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCVendedor_Publicar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCVendedor_Publicar.Designer.cs">
+      <DependentUpon>UCVendedor_Publicar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCVendedor_Ventas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCVendedor_Ventas.Designer.cs">
+      <DependentUpon>UCVendedor_Ventas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmBiblioteca.resx">
       <DependentUpon>FrmBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVendedores.resx">
+      <DependentUpon>FrmVendedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -218,6 +245,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCSeguridad_Datos.resx">
       <DependentUpon>UCSeguridad_Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCVendedor_MisLibros.resx">
+      <DependentUpon>UCVendedor_MisLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCVendedor_Publicar.resx">
+      <DependentUpon>UCVendedor_Publicar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCVendedor_Ventas.resx">
+      <DependentUpon>UCVendedor_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

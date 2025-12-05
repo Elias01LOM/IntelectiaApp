@@ -30,12 +30,12 @@
         {
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnSeguridad = new System.Windows.Forms.Button();
-            this.btnInfoPersonal = new System.Windows.Forms.Button();
-            this.btnMetodosPago = new System.Windows.Forms.Button();
             this.btnNavDirecciones = new System.Windows.Forms.Button();
-            this.pnlContenido = new System.Windows.Forms.Panel();
+            this.btnMetodosPago = new System.Windows.Forms.Button();
+            this.btnInfoPersonal = new System.Windows.Forms.Button();
+            this.btnSeguridad = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlMenuPerfil = new System.Windows.Forms.Panel();
             this.pnlMenuLateral.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,74 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
+            // btnNavDirecciones
+            // 
+            this.btnNavDirecciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(85)))), ((int)(((byte)(48)))));
+            this.btnNavDirecciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNavDirecciones.FlatAppearance.BorderSize = 0;
+            this.btnNavDirecciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavDirecciones.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnNavDirecciones.ForeColor = System.Drawing.Color.White;
+            this.btnNavDirecciones.Location = new System.Drawing.Point(93, 355);
+            this.btnNavDirecciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNavDirecciones.Name = "btnNavDirecciones";
+            this.btnNavDirecciones.Size = new System.Drawing.Size(225, 53);
+            this.btnNavDirecciones.TabIndex = 5;
+            this.btnNavDirecciones.Text = "Direcciones";
+            this.btnNavDirecciones.UseVisualStyleBackColor = false;
+            this.btnNavDirecciones.Click += new System.EventHandler(this.btnNavDirecciones_Click);
+            // 
+            // btnMetodosPago
+            // 
+            this.btnMetodosPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(85)))), ((int)(((byte)(48)))));
+            this.btnMetodosPago.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMetodosPago.FlatAppearance.BorderSize = 0;
+            this.btnMetodosPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMetodosPago.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnMetodosPago.ForeColor = System.Drawing.Color.White;
+            this.btnMetodosPago.Location = new System.Drawing.Point(93, 455);
+            this.btnMetodosPago.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMetodosPago.Name = "btnMetodosPago";
+            this.btnMetodosPago.Size = new System.Drawing.Size(225, 53);
+            this.btnMetodosPago.TabIndex = 4;
+            this.btnMetodosPago.Text = "Métodos de Pago";
+            this.btnMetodosPago.UseVisualStyleBackColor = false;
+            this.btnMetodosPago.Click += new System.EventHandler(this.btnMetodosPago_Click);
+            // 
+            // btnInfoPersonal
+            // 
+            this.btnInfoPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(85)))), ((int)(((byte)(48)))));
+            this.btnInfoPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfoPersonal.FlatAppearance.BorderSize = 0;
+            this.btnInfoPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfoPersonal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnInfoPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnInfoPersonal.Location = new System.Drawing.Point(93, 155);
+            this.btnInfoPersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInfoPersonal.Name = "btnInfoPersonal";
+            this.btnInfoPersonal.Size = new System.Drawing.Size(225, 53);
+            this.btnInfoPersonal.TabIndex = 3;
+            this.btnInfoPersonal.Text = "Información Personal";
+            this.btnInfoPersonal.UseVisualStyleBackColor = false;
+            this.btnInfoPersonal.Click += new System.EventHandler(this.btnInfoPersonal_Click);
+            // 
+            // btnSeguridad
+            // 
+            this.btnSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(85)))), ((int)(((byte)(48)))));
+            this.btnSeguridad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeguridad.FlatAppearance.BorderSize = 0;
+            this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeguridad.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSeguridad.ForeColor = System.Drawing.Color.White;
+            this.btnSeguridad.Location = new System.Drawing.Point(93, 255);
+            this.btnSeguridad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSeguridad.Name = "btnSeguridad";
+            this.btnSeguridad.Size = new System.Drawing.Size(225, 53);
+            this.btnSeguridad.TabIndex = 2;
+            this.btnSeguridad.Text = "Seguridad";
+            this.btnSeguridad.UseVisualStyleBackColor = false;
+            this.btnSeguridad.Click += new System.EventHandler(this.btnSeguridad_Click);
+            // 
             // lblTitulo
             // 
             this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -79,83 +147,15 @@
             this.lblTitulo.Text = "Perfil y Ajustes";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSeguridad
+            // pnlMenuPerfil
             // 
-            this.btnSeguridad.BackColor = System.Drawing.Color.White;
-            this.btnSeguridad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeguridad.FlatAppearance.BorderSize = 0;
-            this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeguridad.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnSeguridad.ForeColor = System.Drawing.Color.Black;
-            this.btnSeguridad.Location = new System.Drawing.Point(93, 255);
-            this.btnSeguridad.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSeguridad.Name = "btnSeguridad";
-            this.btnSeguridad.Size = new System.Drawing.Size(225, 53);
-            this.btnSeguridad.TabIndex = 2;
-            this.btnSeguridad.Text = "Seguridad";
-            this.btnSeguridad.UseVisualStyleBackColor = false;
-            this.btnSeguridad.Click += new System.EventHandler(this.btnSeguridad_Click);
-            // 
-            // btnInfoPersonal
-            // 
-            this.btnInfoPersonal.BackColor = System.Drawing.Color.White;
-            this.btnInfoPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfoPersonal.FlatAppearance.BorderSize = 0;
-            this.btnInfoPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfoPersonal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnInfoPersonal.ForeColor = System.Drawing.Color.Black;
-            this.btnInfoPersonal.Location = new System.Drawing.Point(93, 155);
-            this.btnInfoPersonal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInfoPersonal.Name = "btnInfoPersonal";
-            this.btnInfoPersonal.Size = new System.Drawing.Size(225, 53);
-            this.btnInfoPersonal.TabIndex = 3;
-            this.btnInfoPersonal.Text = "Información Personal";
-            this.btnInfoPersonal.UseVisualStyleBackColor = false;
-            this.btnInfoPersonal.Click += new System.EventHandler(this.btnInfoPersonal_Click);
-            // 
-            // btnMetodosPago
-            // 
-            this.btnMetodosPago.BackColor = System.Drawing.Color.White;
-            this.btnMetodosPago.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMetodosPago.FlatAppearance.BorderSize = 0;
-            this.btnMetodosPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMetodosPago.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnMetodosPago.ForeColor = System.Drawing.Color.Black;
-            this.btnMetodosPago.Location = new System.Drawing.Point(93, 455);
-            this.btnMetodosPago.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMetodosPago.Name = "btnMetodosPago";
-            this.btnMetodosPago.Size = new System.Drawing.Size(225, 53);
-            this.btnMetodosPago.TabIndex = 4;
-            this.btnMetodosPago.Text = "Métodos de Pago";
-            this.btnMetodosPago.UseVisualStyleBackColor = false;
-            this.btnMetodosPago.Click += new System.EventHandler(this.btnMetodosPago_Click);
-            // 
-            // btnNavDirecciones
-            // 
-            this.btnNavDirecciones.BackColor = System.Drawing.Color.White;
-            this.btnNavDirecciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNavDirecciones.FlatAppearance.BorderSize = 0;
-            this.btnNavDirecciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavDirecciones.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnNavDirecciones.ForeColor = System.Drawing.Color.Black;
-            this.btnNavDirecciones.Location = new System.Drawing.Point(93, 355);
-            this.btnNavDirecciones.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNavDirecciones.Name = "btnNavDirecciones";
-            this.btnNavDirecciones.Size = new System.Drawing.Size(225, 53);
-            this.btnNavDirecciones.TabIndex = 5;
-            this.btnNavDirecciones.Text = "Direcciones";
-            this.btnNavDirecciones.UseVisualStyleBackColor = false;
-            this.btnNavDirecciones.Click += new System.EventHandler(this.btnNavDirecciones_Click);
-            // 
-            // pnlContenido
-            // 
-            this.pnlContenido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Size = new System.Drawing.Size(855, 683);
-            this.pnlContenido.TabIndex = 3;
+            this.pnlMenuPerfil.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlMenuPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMenuPerfil.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenuPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlMenuPerfil.Name = "pnlMenuPerfil";
+            this.pnlMenuPerfil.Size = new System.Drawing.Size(855, 683);
+            this.pnlMenuPerfil.TabIndex = 3;
             // 
             // FrmPerfil
             // 
@@ -164,7 +164,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(855, 683);
             this.Controls.Add(this.pnlMenuLateral);
-            this.Controls.Add(this.pnlContenido);
+            this.Controls.Add(this.pnlMenuPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPerfil";
             this.Text = "FrmPerfil";
@@ -183,6 +183,6 @@
         private System.Windows.Forms.Button btnInfoPersonal;
         private System.Windows.Forms.Button btnSeguridad;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Panel pnlContenido;
+        private System.Windows.Forms.Panel pnlMenuPerfil;
     }
 }

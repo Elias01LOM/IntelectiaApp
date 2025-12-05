@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 748);
             this.panel1.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.panel4.Controls.Add(this.btnBiblioteca);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(225, 748);
             this.panel4.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.btnPerfil.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Location = new System.Drawing.Point(0, 623);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(225, 53);
             this.btnPerfil.TabIndex = 6;
@@ -99,12 +99,13 @@
             this.btnVendedores.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnVendedores.ForeColor = System.Drawing.Color.White;
             this.btnVendedores.Location = new System.Drawing.Point(0, 566);
-            this.btnVendedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVendedores.Margin = new System.Windows.Forms.Padding(2);
             this.btnVendedores.Name = "btnVendedores";
             this.btnVendedores.Size = new System.Drawing.Size(225, 53);
             this.btnVendedores.TabIndex = 5;
             this.btnVendedores.Text = "Para Vendedores";
             this.btnVendedores.UseVisualStyleBackColor = false;
+            this.btnVendedores.Click += new System.EventHandler(this.btnVendedores_Click);
             // 
             // btnGrupos
             // 
@@ -115,7 +116,7 @@
             this.btnGrupos.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnGrupos.ForeColor = System.Drawing.Color.White;
             this.btnGrupos.Location = new System.Drawing.Point(0, 508);
-            this.btnGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrupos.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrupos.Name = "btnGrupos";
             this.btnGrupos.Size = new System.Drawing.Size(225, 53);
             this.btnGrupos.TabIndex = 4;
@@ -131,7 +132,7 @@
             this.btnMarketplace.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnMarketplace.ForeColor = System.Drawing.Color.White;
             this.btnMarketplace.Location = new System.Drawing.Point(0, 450);
-            this.btnMarketplace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMarketplace.Margin = new System.Windows.Forms.Padding(2);
             this.btnMarketplace.Name = "btnMarketplace";
             this.btnMarketplace.Size = new System.Drawing.Size(225, 53);
             this.btnMarketplace.TabIndex = 3;
@@ -143,7 +144,7 @@
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Location = new System.Drawing.Point(0, 65);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(225, 203);
             this.panel5.TabIndex = 2;
@@ -157,7 +158,7 @@
             this.btnBiblioteca.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnBiblioteca.ForeColor = System.Drawing.Color.White;
             this.btnBiblioteca.Location = new System.Drawing.Point(0, 392);
-            this.btnBiblioteca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBiblioteca.Margin = new System.Windows.Forms.Padding(2);
             this.btnBiblioteca.Name = "btnBiblioteca";
             this.btnBiblioteca.Size = new System.Drawing.Size(225, 53);
             this.btnBiblioteca.TabIndex = 1;
@@ -171,7 +172,7 @@
             this.panel2.Controls.Add(this.lblCerrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(225, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(855, 65);
             this.panel2.TabIndex = 1;
@@ -195,7 +196,7 @@
             this.panel3.Controls.Add(this.lblSaludo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(225, 65);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(855, 683);
             this.panel3.TabIndex = 2;
@@ -221,7 +222,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDashboard";

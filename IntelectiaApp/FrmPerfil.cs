@@ -26,11 +26,11 @@ namespace IntelectiaApp
 
         private void MostrarPanel(UserControl panelHijo)
         {
-            pnlContenido.Controls.Clear();
+            pnlMenuPerfil.Controls.Clear();
             panelHijo.Dock = DockStyle.Fill;
 
             // Lo agregamos al panel contenedor
-            pnlContenido.Controls.Add(panelHijo);
+            pnlMenuPerfil.Controls.Add(panelHijo);
             panelHijo.BringToFront();
         }
 
