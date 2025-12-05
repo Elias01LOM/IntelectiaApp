@@ -87,6 +87,7 @@ namespace IntelectiaApp
         private void btnGrupos_Click(object sender, EventArgs e)
         {
             ResaltarBoton(btnGrupos);    // Resalta el botón activo
+            AbrirFormularioHijo(new FrmGrupos());
         }
 
         private void btnVendedores_Click(object sender, EventArgs e)
