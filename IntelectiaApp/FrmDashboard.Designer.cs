@@ -41,6 +41,7 @@
             this.lblSaludo = new System.Windows.Forms.Label();
             this.lblCerrar = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -262,5 +263,6 @@
         private System.Windows.Forms.Button btnVendedores;
         private System.Windows.Forms.Label lblSaludo;
         private System.Windows.Forms.Label lblCerrar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -55,74 +55,7 @@ namespace IntelectiaApp
         {
             lblCerrar.ForeColor = Color.Gray;
         }
-        private void botonRedondo2_Click(object sender, EventArgs e)
-        {
-            // URL de autenticación de Google
-            string urlGoogle = "https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin";
-            try
-            {
-                // Abre el navegador predeterminado del sistema
-                System.Diagnostics.Process.Start(urlGoogle);
-                // Muestra mensaje en la app
-                MessageBox.Show("Se ha abierto el navegador para iniciar sesión con Google.\n\n" +
-                                "Nota: La integración completa de OAuth requiere configuración de API en la nube.",
-                                "Redirección", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo abrir el navegador: " + ex.Message);
-            }
-        }
-        private void botonRedondo1_Click(object sender, EventArgs e)
-        {
-            // Validamos que no hay campos vacíos
-            if (string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text))
-            {
-                MessageBox.Show("Por favor, ingrese correo y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            CConexion objetoConexion = new CConexion();    // Conectamos a la Base de Datos
-            MySqlConnection conexion = objetoConexion.EstablecerConexion();
 
-            if (conexion != null) // Si la conexión abrió bien
-            {
-                try
-                {
-                    // Consulta SQL
-                    string query = "SELECT idUsuario, email, nombre, tipoUsuario FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = 1";
-                    MySqlCommand cmd = new MySqlCommand(query, conexion);
-                    cmd.Parameters.AddWithValue("@email", txtCorreo.Text);
-                    cmd.Parameters.AddWithValue("@pass", txtContraseña.Text);
-                    MySqlDataReader reader = cmd.ExecuteReader();    // Ejecuta la lectura
-                    if (reader.Read()) // Si encuentra a algún usuario
-                    {
-                        // Para que se guarden los datos del usuario para proximas modificaciones o para mostrar
-                        Sesion.IdUsuario = reader["idUsuario"].ToString(); 
-                        Sesion.Nombre = reader["nombre"].ToString();
-                        Sesion.Email = reader["email"].ToString();
-                        Sesion.TipoUsuario = reader["tipoUsuario"].ToString();
-                        string nombreBD = reader["nombre"].ToString();
-                        string rolBD = reader["tipoUsuario"].ToString(); // Opcional, por si se usa luego
-                        FrmDashboard dash = new FrmDashboard(nombreBD);
-                        this.Hide();    // Ocultamos el Login
-                        dash.FormClosed += (s, args) => this.Close();    // Aseguramos cierre total
-                        dash.Show();    // Mostramos el Dashboard
-                    }
-                    else
-                    {
-                        MessageBox.Show("Credenciales incorrectas o cuenta inactiva.", "Error de Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al autenticar: " + ex.Message);
-                }
-                finally
-                {
-                    objetoConexion.CerrarConexion();
-                }
-            }
-        }
         private void label4_Click(object sender, EventArgs e)
         {
             FrmRegistro registro = new FrmRegistro();
@@ -150,5 +83,76 @@ namespace IntelectiaApp
         {
 
         }
+
+        private void btnAccion_Click(object sender, EventArgs e)
+        {
+            // Validamos que no hay campos vacíos
+            if (string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text))
+            {
+                MessageBox.Show("Por favor, ingrese correo y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            CConexion objetoConexion = new CConexion();    // Conectamos a la Base de Datos
+            MySqlConnection conexion = objetoConexion.EstablecerConexion();
+
+            if (conexion != null) // Si la conexión abrió bien
+            {
+                try
+                {
+                    // Consulta SQL
+                    string query = "SELECT idUsuario, email, nombre, tipoUsuario FROM Usuario WHERE email = @email AND contrasena = @pass AND estado = 1";
+                    MySqlCommand cmd = new MySqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@email", txtCorreo.Text);
+                    cmd.Parameters.AddWithValue("@pass", txtContraseña.Text);
+                    MySqlDataReader reader = cmd.ExecuteReader();    // Ejecuta la lectura
+                    if (reader.Read()) // Si encuentra a algún usuario
+                    {
+                        // Para que se guarden los datos del usuario para proximas modificaciones o para mostrar
+                        Sesion.IdUsuario = reader["idUsuario"].ToString();
+                        Sesion.Nombre = reader["nombre"].ToString();
+                        Sesion.Email = reader["email"].ToString();
+                        Sesion.TipoUsuario = reader["tipoUsuario"].ToString();
+                        string nombreBD = reader["nombre"].ToString();
+                        string rolBD = reader["tipoUsuario"].ToString(); // Opcional, por si se usa luego
+                        FrmDashboard dash = new FrmDashboard(nombreBD);
+                        this.Hide();    // Ocultamos el Login
+                        dash.FormClosed += (s, args) => this.Close();    // Aseguramos cierre total
+                        dash.Show();    // Mostramos el Dashboard
+                    }
+                    else
+                    {
+                        MessageBox.Show("Credenciales incorrectas o cuenta inactiva.", "Error de Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al autenticar: " + ex.Message);
+                }
+                finally
+                {
+                    objetoConexion.CerrarConexion();
+                }
+            }
+        }
+
+        private void botonRedondo1_Click(object sender, EventArgs e)
+        {
+            // URL de autenticación de Google
+            string urlGoogle = "https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin";
+            try
+            {
+                // Abre el navegador predeterminado del sistema
+                System.Diagnostics.Process.Start(urlGoogle);
+                // Muestra mensaje en la app
+                MessageBox.Show("Se ha abierto el navegador para iniciar sesión con Google.\n\n" +
+                                "Nota: La integración completa de OAuth requiere configuración de API en la nube.",
+                                "Redirección", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo abrir el navegador: " + ex.Message);
+            }
+        }
+
     }
 }

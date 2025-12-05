@@ -92,6 +92,7 @@ namespace IntelectiaApp
         private void btnVendedores_Click(object sender, EventArgs e)
         {
             ResaltarBoton(btnVendedores);    // Resalta el botón activo
+            AbrirFormularioHijo(new FrmVendedores());
         }
 
         private void lblSaludo_Click(object sender, EventArgs e)
@@ -107,11 +108,6 @@ namespace IntelectiaApp
         private void lblCerrar_MouseLeave(object sender, EventArgs e)
         {
             lblCerrar.ForeColor = Color.Gray;
-        }
-
-        private void btnVendedores_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new FrmVendedores());
         }
     }
 }
