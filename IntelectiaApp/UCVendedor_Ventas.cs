@@ -60,7 +60,6 @@ namespace IntelectiaApp
                             L.titulo AS 'Libro Vendido',
                             U.nombre AS 'Comprador',
                             DP.cantidad AS 'Cant.',
-                            DP.precioUnitario AS 'Precio Unit.',
                             DP.subtotal AS 'Total'
                         FROM DetallePedido DP
                         INNER JOIN Libro L ON DP.isbn = L.isbn

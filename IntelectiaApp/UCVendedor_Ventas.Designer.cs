@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblGanancias = new System.Windows.Forms.Label();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblGanancias = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
@@ -51,13 +51,24 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
+            // lblGanancias
+            // 
+            this.lblGanancias.AutoSize = true;
+            this.lblGanancias.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblGanancias.ForeColor = System.Drawing.Color.Black;
+            this.lblGanancias.Location = new System.Drawing.Point(35, 572);
+            this.lblGanancias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGanancias.Name = "lblGanancias";
+            this.lblGanancias.Size = new System.Drawing.Size(0, 20);
+            this.lblGanancias.TabIndex = 12;
+            // 
             // dgvVentas
             // 
             this.dgvVentas.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Location = new System.Drawing.Point(39, 92);
+            this.dgvVentas.Location = new System.Drawing.Point(12, 92);
             this.dgvVentas.Name = "dgvVentas";
-            this.dgvVentas.Size = new System.Drawing.Size(342, 456);
+            this.dgvVentas.Size = new System.Drawing.Size(392, 456);
             this.dgvVentas.TabIndex = 2;
             this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
             // 
@@ -73,17 +84,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Ventas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblGanancias
-            // 
-            this.lblGanancias.AutoSize = true;
-            this.lblGanancias.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblGanancias.ForeColor = System.Drawing.Color.Black;
-            this.lblGanancias.Location = new System.Drawing.Point(35, 572);
-            this.lblGanancias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblGanancias.Name = "lblGanancias";
-            this.lblGanancias.Size = new System.Drawing.Size(0, 20);
-            this.lblGanancias.TabIndex = 12;
             // 
             // UCVendedor_Ventas
             // 
