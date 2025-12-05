@@ -21,43 +21,33 @@ namespace IntelectiaApp
         private void FrmBiblioteca_Load(object sender, EventArgs e)
         {
             CargarLibrosDesdeBD();
+            CargarSeccionLectura();
+        }
+        private void CargarSeccionLectura()
+        {
+            // Limpiamos
+            flowLectura.Controls.Clear();
+
+            // DATOS MOCKUP (Idénticos a tu imagen)
+            // 1. Python
+            UCTarjetaLecturacs card1 = new UCTarjetaLecturacs();
+            card1.ConfigurarTarjeta("Python\nPara Todos", "Raúl G. Duque", 75);
+            flowLectura.Controls.Add(card1);
+
+            // 2. Machine Learning
+            UCTarjetaLecturacs card2 = new UCTarjetaLecturacs();
+            card2.ConfigurarTarjeta("Machine\nLearning", "Rudolph Russell", 15);
+            flowLectura.Controls.Add(card2);
+
+            // 3. Node JS
+            UCTarjetaLecturacs card3 = new UCTarjetaLecturacs();
+            card3.ConfigurarTarjeta("Manual de\nNodeJS", "Alejandro Morales", 60);
+            flowLectura.Controls.Add(card3);
         }
 
         private void CargarLibrosDesdeBD()
         {
-            // Se limpia el panel; si es que se recarga
-            flowPanelLibros.Controls.Clear();
-            CConexion objetoConexion = new CConexion();
-            using (MySqlConnection conexion = objetoConexion.EstablecerConexion())
-            {
-                if (conexion != null)
-                {
-                    try
-                    {
-                        string query = "SELECT titulo, autor, precio, urlImagen, formato FROM Libro WHERE formato IN ('PDF', 'EPUB', 'Audio')";    // Se hace la consulta SQL
-                        MySqlCommand cmd = new MySqlCommand(query, conexion);
-                        MySqlDataReader reader = cmd.ExecuteReader();
-                        while (reader.Read())    // Se recorren los resultados
-                        {
-                            // Obtener datos de la fila actual
-                            string titulo = reader["titulo"].ToString();
-                            string autor = reader["autor"].ToString();
-                            string precio = reader["precio"].ToString();
-                            string url = reader["urlImagen"].ToString();
-                            // Se crea la isntancia 'UCLibro'
-                            UCLibro tarjeta = new UCLibro();
-                            // Se inyectan los datos
-                            tarjeta.ConfigurarDatos(titulo, autor, precio, url);
-                            // Se agregan los elementos al panel visual
-                            flowPanelLibros.Controls.Add(tarjeta);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al cargar biblioteca: " + ex.Message);
-                    }
-                }
-            }
+            
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -65,6 +55,16 @@ namespace IntelectiaApp
         }
 
         private void flowPanelLibros_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
 
         }

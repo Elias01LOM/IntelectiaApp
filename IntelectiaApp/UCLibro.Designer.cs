@@ -42,8 +42,8 @@
             this.picPortada.Image = ((System.Drawing.Image)(resources.GetObject("picPortada.Image")));
             this.picPortada.Location = new System.Drawing.Point(0, 0);
             this.picPortada.Name = "picPortada";
-            this.picPortada.Size = new System.Drawing.Size(180, 190);
-            this.picPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPortada.Size = new System.Drawing.Size(180, 200);
+            this.picPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPortada.TabIndex = 1;
             this.picPortada.TabStop = false;
             this.picPortada.Click += new System.EventHandler(this.picPortada_Click);
@@ -53,7 +53,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTitulo.Location = new System.Drawing.Point(0, 190);
+            this.lblTitulo.Location = new System.Drawing.Point(0, 200);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(124, 23);
             this.lblTitulo.TabIndex = 2;
@@ -66,7 +66,7 @@
             this.lblAutor.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblAutor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblAutor.ForeColor = System.Drawing.Color.Gray;
-            this.lblAutor.Location = new System.Drawing.Point(0, 213);
+            this.lblAutor.Location = new System.Drawing.Point(0, 223);
             this.lblAutor.Name = "lblAutor";
             this.lblAutor.Size = new System.Drawing.Size(109, 20);
             this.lblAutor.TabIndex = 3;

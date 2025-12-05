@@ -180,6 +180,12 @@
     <Compile Include="UCSeguridad_Datos.Designer.cs">
       <DependentUpon>UCSeguridad_Datos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTarjetaLecturacs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTarjetaLecturacs.Designer.cs">
+      <DependentUpon>UCTarjetaLecturacs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCVendedor_MisLibros.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCSeguridad_Datos.resx">
       <DependentUpon>UCSeguridad_Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTarjetaLecturacs.resx">
+      <DependentUpon>UCTarjetaLecturacs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCVendedor_MisLibros.resx">
       <DependentUpon>UCVendedor_MisLibros.cs</DependentUpon>
