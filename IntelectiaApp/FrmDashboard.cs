@@ -17,7 +17,7 @@ namespace IntelectiaApp
         {
             InitializeComponent();
             lblSaludo.Text = "Hola, " + nombreUsuario;    // Asignamos el nombre del usuario al label de saludo
-
+            btnBiblioteca_Click(null, null);    // Autoarranca el formulario de 'Mi Biblioteca'
         }
         private void lblCerrar_Click(object sender, EventArgs e)
         {
@@ -47,11 +47,66 @@ namespace IntelectiaApp
         private void btnBiblioteca_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new FrmBiblioteca());
+            ResaltarBoton(btnBiblioteca);    // Resalta el botón activo
+            AbrirFormularioHijo(new FrmBiblioteca());
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new FrmPerfil());
+            ResaltarBoton(btnPerfil);    // Resalta el botón activo
+        }
+        private void ResaltarBoton(Button botonActivo)
+        {
+            // 1. Color Original (Verde Institucional)
+            Color colorNormal = Color.FromArgb(44, 85, 48);
+
+            // 2. Color "Seleccionado" (Un poco más oscuro o más claro para contraste)
+            Color colorActivo = Color.FromArgb(35, 65, 38); // Verde más oscuro
+
+            // 3. Resetear TODOS los botones (Pon aquí los nombres de tus 5 botones)
+            btnBiblioteca.BackColor = colorNormal;
+            btnMarketplace.BackColor = colorNormal;
+            btnGrupos.BackColor = colorNormal;
+            btnVendedores.BackColor = colorNormal;
+            btnPerfil.BackColor = colorNormal;
+
+            // 4. Encender SOLO el que dimos clic
+            if (botonActivo != null)
+            {
+                botonActivo.BackColor = colorActivo;
+                // Opcional: Poner una barrita de color al lado o cambiar el texto a Bold
+            }
+        }
+
+        private void btnMarketplace_Click(object sender, EventArgs e)
+        {
+            ResaltarBoton(btnMarketplace);    // Resalta el botón activo
+        }
+
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
+            ResaltarBoton(btnGrupos);    // Resalta el botón activo
+        }
+
+        private void btnVendedores_Click(object sender, EventArgs e)
+        {
+            ResaltarBoton(btnVendedores);    // Resalta el botón activo
+        }
+
+        private void lblSaludo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            lblCerrar.ForeColor = Color.Red;
+        }
+
+        private void lblCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            lblCerrar.ForeColor = Color.Gray;
         }
     }
 }
