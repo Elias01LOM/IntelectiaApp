@@ -93,5 +93,57 @@ namespace IntelectiaApp
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Configuramos el cuadro de diálogo para abrir archivos
+            OpenFileDialog abrirArchivo = new OpenFileDialog();
+            abrirArchivo.Filter = "Documentos PDF|*.pdf|Libros EPUB|*.epub|Todos los archivos|*.*";
+            abrirArchivo.Title = "Selecciona un documento para tu biblioteca";
+            if (abrirArchivo.ShowDialog() == DialogResult.OK)    // Si el usuario selecciona un archivo y presiona 'Aceptar'
+            {
+                // Obtienemos el nombre del archivo sin la ruta completa ni la extensión
+                string nombreArchivo = System.IO.Path.GetFileNameWithoutExtension(abrirArchivo.FileName);
+                string autor = "Documento Local";    // Simulamos un autor genérico
+                UCTarjetaLecturacs nuevaTarjeta = new UCTarjetaLecturacs();    // Crea una nueva tarjeta de lectura de forma dinámica
+                nuevaTarjeta.ConfigurarTarjeta(nombreArchivo, autor, 0);       // Configura la tarjeta que marque '0s' de progreso
+                flowLectura.Controls.Add(nuevaTarjeta);                // Agrega la nueva tarjeta al 'flowLayoutPanel'
+                flowLectura.Controls.SetChildIndex(nuevaTarjeta, 0);   // Utilizamos 'SetChildIndex' para que aparezca primero
+                MessageBox.Show($"¡Documento '{nombreArchivo}' agregado a tu biblioteca!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // Configuramos el cuadro de diálogo para abrir archivos
+            OpenFileDialog abrirArchivo = new OpenFileDialog();
+            abrirArchivo.Filter = "Documentos PDF|*.pdf|Libros EPUB|*.epub|Todos los archivos|*.*";
+            abrirArchivo.Title = "Selecciona un documento para tu biblioteca";
+            if (abrirArchivo.ShowDialog() == DialogResult.OK)    // Si el usuario selecciona un archivo y presiona 'Aceptar'
+            {
+                // Obtienemos el nombre del archivo sin la ruta completa ni la extensión
+                string nombreArchivo = System.IO.Path.GetFileNameWithoutExtension(abrirArchivo.FileName);
+                string autor = "Documento Local";    // Simulamos un autor genérico
+                UCTarjetaLecturacs nuevaTarjeta = new UCTarjetaLecturacs();    // Crea una nueva tarjeta de lectura de forma dinámica
+                nuevaTarjeta.ConfigurarTarjeta(nombreArchivo, autor, 0);       // Configura la tarjeta que marque '0s' de progreso
+                flowLectura.Controls.Add(nuevaTarjeta);                // Agrega la nueva tarjeta al 'flowLayoutPanel'
+                flowLectura.Controls.SetChildIndex(nuevaTarjeta, 0);   // Utilizamos 'SetChildIndex' para que aparezca primero
+                MessageBox.Show($"¡Documento '{nombreArchivo}' agregado a tu biblioteca!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void lblTabMarketplace_Click(object sender, EventArgs e)
+        {
+            FrmDashboard dashboardPrincipal = this.ParentForm as FrmDashboard;    // Creamos una referencia al formulario principal (dashboard)
+            if (dashboardPrincipal != null)    // Verificamos que la referencia no sea nula
+            {
+                dashboardPrincipal.AbrirMarketplaceDesdeBiblioteca();    // Llamamos al método público del dashboard para abrir el marketplace
+            }
+        }
+
+        private void pnlContenedorPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
