@@ -41,7 +41,6 @@ namespace IntelectiaApp
 
         private void btnMisChats_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Aquí verías tus chats guardados. (Simulación)");
         }
     }
 }
