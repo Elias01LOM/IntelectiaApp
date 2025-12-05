@@ -95,6 +95,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotonPunteado.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonRedondo.cs">
       <SubType>Component</SubType>
     </Compile>

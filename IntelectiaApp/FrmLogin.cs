@@ -154,5 +154,23 @@ namespace IntelectiaApp
             }
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            // URL de autenticación de Google
+            string urlGoogle = "https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin";
+            try
+            {
+                // Abre el navegador predeterminado del sistema
+                System.Diagnostics.Process.Start(urlGoogle);
+                // Muestra mensaje en la app
+                MessageBox.Show("Se ha abierto el navegador para iniciar sesión con Google.\n\n" +
+                                "Nota: La integración completa de OAuth requiere configuración de API en la nube.",
+                                "Redirección", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo abrir el navegador: " + ex.Message);
+            }
+        }
     }
 }

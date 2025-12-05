@@ -17,6 +17,7 @@ namespace IntelectiaApp
         public FrmPerfil()
         {
             InitializeComponent();
+            btnInfoPersonal_Click(null, null);    // Autoarranca la pantalla de 'Información Personal'
         }
         private void FrmPerfil_Load(object sender, EventArgs e)
         {

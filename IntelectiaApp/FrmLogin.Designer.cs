@@ -39,6 +39,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.botonRedondo1 = new BotonRedondo();
+            this.btnAccion = new BotonRedondo();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,8 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.botonRedondo1 = new BotonRedondo();
-            this.btnAccion = new BotonRedondo();
             this.botonRedondo2 = new BotonRedondo();
             this.btnIngresar = new BotonRedondo();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,10 +63,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 203);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 250);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -76,10 +76,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(44, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(59, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 32);
+            this.label1.Size = new System.Drawing.Size(191, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "Iniciar Sesión";
             // 
@@ -91,10 +90,10 @@
             this.txtCorreo.BackColor = System.Drawing.Color.White;
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCorreo.Location = new System.Drawing.Point(20, 10);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo.Location = new System.Drawing.Point(27, 12);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(300, 22);
+            this.txtCorreo.Size = new System.Drawing.Size(400, 27);
             this.txtCorreo.TabIndex = 3;
             this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
@@ -104,10 +103,9 @@
             this.label2.BackColor = System.Drawing.SystemColors.Window;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.5F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(85)))), ((int)(((byte)(48)))));
-            this.label2.Location = new System.Drawing.Point(251, 207);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(335, 255);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 15);
+            this.label2.Size = new System.Drawing.Size(180, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "¿Olvidaste tu Contraseña?";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -116,10 +114,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label3.Location = new System.Drawing.Point(244, 384);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(325, 473);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 17);
+            this.label3.Size = new System.Drawing.Size(146, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "¿No Tienes Cuenta?";
             // 
@@ -128,10 +125,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(85)))), ((int)(((byte)(48)))));
-            this.label4.Location = new System.Drawing.Point(363, 383);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(484, 471);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 19);
+            this.label4.Size = new System.Drawing.Size(86, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Registrate";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -144,9 +140,9 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 409);
+            this.panel1.Size = new System.Drawing.Size(300, 503);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -154,10 +150,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label7.Location = new System.Drawing.Point(52, 334);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(69, 411);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 25);
+            this.label7.Size = new System.Drawing.Size(164, 32);
             this.label7.TabIndex = 3;
             this.label7.Text = "Conocimiento";
             // 
@@ -165,10 +160,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label6.Location = new System.Drawing.Point(38, 311);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(51, 383);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 25);
+            this.label6.Size = new System.Drawing.Size(199, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Tu Ecosistema de";
             // 
@@ -190,115 +184,12 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(225, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(300, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(437, 409);
+            this.panel2.Size = new System.Drawing.Size(583, 503);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(62, 326);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(45, 141);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Contraseña";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Location = new System.Drawing.Point(49, 204);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(338, 1);
-            this.panel5.TabIndex = 13;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.txtContraseña);
-            this.panel6.Location = new System.Drawing.Point(49, 164);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(338, 41);
-            this.panel6.TabIndex = 12;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContraseña.BackColor = System.Drawing.Color.White;
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtContraseña.Location = new System.Drawing.Point(20, 10);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(300, 22);
-            this.txtContraseña.TabIndex = 3;
-            // 
-            // lblCerrar
-            // 
-            this.lblCerrar.AutoSize = true;
-            this.lblCerrar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCerrar.ForeColor = System.Drawing.Color.Gray;
-            this.lblCerrar.Location = new System.Drawing.Point(418, 0);
-            this.lblCerrar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCerrar.Name = "lblCerrar";
-            this.lblCerrar.Size = new System.Drawing.Size(19, 21);
-            this.lblCerrar.TabIndex = 11;
-            this.lblCerrar.Text = "X";
-            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
-            this.lblCerrar.MouseEnter += new System.EventHandler(this.lblCerrar_MouseEnter);
-            this.lblCerrar.MouseLeave += new System.EventHandler(this.lblCerrar_MouseLeave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(45, 60);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Correo Electrónico";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gray;
-            this.panel4.Location = new System.Drawing.Point(49, 123);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(338, 1);
-            this.panel4.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtCorreo);
-            this.panel3.Location = new System.Drawing.Point(49, 83);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(338, 41);
-            this.panel3.TabIndex = 8;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // botonRedondo1
             // 
@@ -309,10 +200,10 @@
             this.botonRedondo1.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.botonRedondo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(85)))), ((int)(((byte)(48)))));
             this.botonRedondo1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.botonRedondo1.Location = new System.Drawing.Point(96, 320);
-            this.botonRedondo1.Margin = new System.Windows.Forms.Padding(2);
+            this.botonRedondo1.Location = new System.Drawing.Point(128, 394);
+            this.botonRedondo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.botonRedondo1.Name = "botonRedondo1";
-            this.botonRedondo1.Size = new System.Drawing.Size(270, 39);
+            this.botonRedondo1.Size = new System.Drawing.Size(360, 48);
             this.botonRedondo1.TabIndex = 25;
             this.botonRedondo1.Text = "Iniciar Con Google";
             this.botonRedondo1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -327,14 +218,115 @@
             this.btnAccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccion.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.btnAccion.ForeColor = System.Drawing.Color.White;
-            this.btnAccion.Location = new System.Drawing.Point(49, 250);
-            this.btnAccion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAccion.Location = new System.Drawing.Point(65, 308);
+            this.btnAccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAccion.Name = "btnAccion";
-            this.btnAccion.Size = new System.Drawing.Size(338, 41);
+            this.btnAccion.Size = new System.Drawing.Size(451, 50);
             this.btnAccion.TabIndex = 24;
             this.btnAccion.Text = "Ingresar";
             this.btnAccion.UseVisualStyleBackColor = false;
             this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(83, 401);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(60, 174);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Contraseña";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Location = new System.Drawing.Point(65, 251);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(451, 1);
+            this.panel5.TabIndex = 13;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.txtContraseña);
+            this.panel6.Location = new System.Drawing.Point(65, 202);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(451, 50);
+            this.panel6.TabIndex = 12;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtContraseña.BackColor = System.Drawing.Color.White;
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtContraseña.Location = new System.Drawing.Point(27, 12);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(400, 27);
+            this.txtContraseña.TabIndex = 3;
+            // 
+            // lblCerrar
+            // 
+            this.lblCerrar.AutoSize = true;
+            this.lblCerrar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblCerrar.ForeColor = System.Drawing.Color.Gray;
+            this.lblCerrar.Location = new System.Drawing.Point(557, 0);
+            this.lblCerrar.Name = "lblCerrar";
+            this.lblCerrar.Size = new System.Drawing.Size(24, 28);
+            this.lblCerrar.TabIndex = 11;
+            this.lblCerrar.Text = "X";
+            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
+            this.lblCerrar.MouseEnter += new System.EventHandler(this.lblCerrar_MouseEnter);
+            this.lblCerrar.MouseLeave += new System.EventHandler(this.lblCerrar_MouseLeave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(60, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(169, 25);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Correo Electrónico";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Location = new System.Drawing.Point(65, 151);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(451, 1);
+            this.panel4.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtCorreo);
+            this.panel3.Location = new System.Drawing.Point(65, 102);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(451, 50);
+            this.panel3.TabIndex = 8;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // botonRedondo2
             // 
@@ -373,13 +365,13 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 409);
+            this.ClientSize = new System.Drawing.Size(883, 503);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FmrLogin";

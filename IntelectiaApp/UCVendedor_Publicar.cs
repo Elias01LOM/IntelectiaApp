@@ -124,5 +124,10 @@ namespace IntelectiaApp
             txtEdicion.Clear();
             cmbCategoria.SelectedIndex = -1;
         }
+
+        private void UCVendedor_Publicar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
