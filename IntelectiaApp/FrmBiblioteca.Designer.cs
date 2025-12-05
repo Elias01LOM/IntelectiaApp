@@ -241,6 +241,7 @@
             // 
             // flowLectura
             // 
+            this.flowLectura.AutoScroll = true;
             this.flowLectura.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLectura.Location = new System.Drawing.Point(0, 270);
             this.flowLectura.Name = "flowLectura";
@@ -263,6 +264,7 @@
             // 
             // flowColecciones
             // 
+            this.flowColecciones.AutoScroll = true;
             this.flowColecciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowColecciones.Location = new System.Drawing.Point(0, 630);
             this.flowColecciones.Name = "flowColecciones";
