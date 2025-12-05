@@ -53,9 +53,9 @@
             // 
             this.dgvInventario.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Location = new System.Drawing.Point(39, 92);
+            this.dgvInventario.Location = new System.Drawing.Point(12, 92);
             this.dgvInventario.Name = "dgvInventario";
-            this.dgvInventario.Size = new System.Drawing.Size(342, 456);
+            this.dgvInventario.Size = new System.Drawing.Size(392, 456);
             this.dgvInventario.TabIndex = 2;
             // 
             // label1
