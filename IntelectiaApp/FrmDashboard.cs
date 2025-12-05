@@ -48,7 +48,6 @@ namespace IntelectiaApp
         {
             AbrirFormularioHijo(new FrmBiblioteca());
             ResaltarBoton(btnBiblioteca);    // Resalta el botón activo
-            AbrirFormularioHijo(new FrmBiblioteca());
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace IntelectiaApp
         public FrmVendedores()
         {
             InitializeComponent();
+            btnPublicar_Click(null, null);
         }
         private void FrmVendedores_Load(object sender, EventArgs e)
         {
