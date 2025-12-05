@@ -126,6 +126,12 @@
     <Compile Include="FrmBiblioteca.Designer.cs">
       <DependentUpon>FrmBiblioteca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMarketplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarketplace.Designer.cs">
+      <DependentUpon>FrmMarketplace.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,12 @@
     <Compile Include="UCTarjetaLecturacs.Designer.cs">
       <DependentUpon>UCTarjetaLecturacs.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTarjetaProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTarjetaProducto.Designer.cs">
+      <DependentUpon>UCTarjetaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCVendedor_MisLibros.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarketplace.resx">
+      <DependentUpon>FrmMarketplace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
@@ -284,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCTarjetaLecturacs.resx">
       <DependentUpon>UCTarjetaLecturacs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTarjetaProducto.resx">
+      <DependentUpon>UCTarjetaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCVendedor_MisLibros.resx">
       <DependentUpon>UCVendedor_MisLibros.cs</DependentUpon>

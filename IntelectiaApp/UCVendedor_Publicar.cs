@@ -82,8 +82,7 @@ namespace IntelectiaApp
                         return;
                     }
                     string idVendedor = result.ToString();
-
-                    // INSERTAR LIBRO
+                    // Insertar Libros
                     string query = @"INSERT INTO Libro (isbn, titulo, autor, precio, stock, estado, formato, idVendedor, idCategoria, fechaPublicacion, editorial, edicion) 
                                      VALUES (@isbn, @titulo, @autor, @precio, @stock, @estado, 'Fisico', @idVend, @idCat, @fecha, @editorial, @edicion)";
 

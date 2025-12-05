@@ -57,24 +57,18 @@ namespace IntelectiaApp
         }
         private void ResaltarBoton(Button botonActivo)
         {
-            // 1. Color Original (Verde Institucional)
-            Color colorNormal = Color.FromArgb(44, 85, 48);
-
-            // 2. Color "Seleccionado" (Un poco más oscuro o más claro para contraste)
-            Color colorActivo = Color.FromArgb(35, 65, 38); // Verde más oscuro
-
-            // 3. Resetear TODOS los botones (Pon aquí los nombres de tus 5 botones)
+            Color colorNormal = Color.FromArgb(44, 85, 48);    // Asiganamos el color de los botones
+            Color colorActivo = Color.FromArgb(35, 65, 38);    // Verde más oscuro
+            // Resetea todos los botones al color normal
             btnBiblioteca.BackColor = colorNormal;
             btnMarketplace.BackColor = colorNormal;
             btnGrupos.BackColor = colorNormal;
             btnVendedores.BackColor = colorNormal;
             btnPerfil.BackColor = colorNormal;
-
-            // 4. Encender SOLO el que dimos clic
-            if (botonActivo != null)
+            if (botonActivo != null)    // Resalta el botón activo
             {
                 botonActivo.BackColor = colorActivo;
-                // Opcional: Poner una barrita de color al lado o cambiar el texto a Bold
+                // Se puede poner una barrita de color al lado o cambiar el texto a Bold (opcional)
             }
         }
 
@@ -87,6 +81,10 @@ namespace IntelectiaApp
         {
             ResaltarBoton(btnGrupos);    // Resalta el botón activo
             AbrirFormularioHijo(new FrmGrupos());
+        }
+        public void AbrirMarketplaceDesdeBiblioteca()
+        {
+            btnMarketplace_Click(null, null);    // Simula el clic en el botón de 'Marketplace'
         }
 
         private void btnVendedores_Click(object sender, EventArgs e)
